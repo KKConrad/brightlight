@@ -59,11 +59,17 @@
         id="navicon" icon="menu"></paper-icon-button>
       <span flex>Title</span>
     </core-toolbar>
-    <div class="content">
+    <div class="content" id="canvas">
       <!-- 3. Declare the element by its tag. -->
-      <paper-button onclick="alert('weiners')" raised>On Button</paper-button>
-      <paper-button id="off" raised>Off Button</paper-button>
+      <paper-button onclick="bkgd('white')" raised>On Button</paper-button>
+
+
+      <paper-button id="off" onclick="bkgd('grey')" raised>Off Button</paper-button>
+      <a onclick="bkgd('red');">test</a>
+
+
       <my-element></my-element>
+
       <paper-button>flat button</paper-button>
       <paper-button raised>raised button</paper-button>
       <paper-button noink>No ripple effect</paper-button>

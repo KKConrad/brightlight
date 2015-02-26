@@ -1,8 +1,3 @@
-function darkenScreen(lightsoff) {
-  var turnoff = document.getElementById("off");
-    console.log("clicked");
-};
-
 document.addEventListener('polymer-ready', function() {
   var navicon = document.getElementById('navicon');
   var drawerPanel = document.getElementById('drawerPanel');
@@ -10,3 +5,8 @@ document.addEventListener('polymer-ready', function() {
     drawerPanel.togglePanel();
   });
 });
+
+function bkgd(color){
+	var color;
+	document.getElementById('canvas').style.background = color;
+};
