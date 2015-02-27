@@ -31,6 +31,7 @@
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/bower.json \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/bower_components \
+/Users/Krizia/work/projects/brightlight/platforms/android/assets/www/bright.css \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/bright.js \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/cordova.js \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/cordova_plugins.js \

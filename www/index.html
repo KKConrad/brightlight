@@ -3,7 +3,7 @@
   <head>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <link rel="stylesheet" src="bright.css">
+    <link rel="stylesheet" href="bright.css">
     <link rel="import" href="elements/my-element.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
@@ -19,62 +19,66 @@
       body {
         font-family: sans-serif;
       }
+
       core-header-panel {
         background: white;
       }
+
       core-toolbar {
         background-color: #03A9F4;
       }
+
       #navheader {
         background-color: #56BA89;
       }
       .content {
         padding: 20px;
+        height: 600px;
       }
-      
+
       core-drawer-panel:not([narrow]) #navicon {
         display: none;
       }
+
     </style>
   </head>
 
   <body>
-    <core-drawer-panel id="drawerPanel">
+  <core-drawer-panel id="drawerPanel">
 
-  <core-header-panel drawer>
-    <core-toolbar id="navheader">
-      <span>Menu</span>
-    </core-toolbar>
-    <core-menu>
-      <core-item label="One"></core-item>
-      <core-item label="Two"></core-item>
-    </core-menu>
-   </core-header-panel>
+    <core-header-panel drawer>
+      <core-toolbar id="navheader">
+        <span>Menu</span>
+      </core-toolbar>
+      <core-menu>
+        <core-item label="Data"></core-item>
+        <core-item label="Where have I been?"></core-item>
+      </core-menu>
+     </core-header-panel>
 
-  <core-header-panel main>
-    <core-toolbar id="mainheader">
-      <paper-icon-button
-        id="navicon" icon="menu"></paper-icon-button>
-      <span flex>Title</span>
-    </core-toolbar>
-    <div class="content" id="canvas">
-      <paper-button onclick="bkgd('white')" raised>On Button</paper-button>
-      <paper-button id="off" onclick="bkgd('grey')" raised>Off Button</paper-button>
-      <a onclick="bkgd('red');">test</a>
+    <core-header-panel main>
+      <core-toolbar id="mainheader">
+        <paper-icon-button
+          id="navicon" icon="menu"></paper-icon-button>
+        <span id="headtext" flex>Brightlight</span>
+      </core-toolbar>
+      <div class="content" id="canvas">
+        <div class="buttonswitches">
+          <paper-button id="on" onclick="bkgd('white')" raised>On Button</paper-button>
+          <paper-button id="off" onclick="bkgd('black')" raised>Off Button</paper-button>
+        </div>
+        <!-- <my-element></my-element>
 
-      <my-element></my-element>
+        <paper-button>flat button</paper-button>
+        <paper-button raised>raised button</paper-button>
+        <paper-button noink>No ripple effect</paper-button>
 
-      <paper-button>flat button</paper-button>
-      <paper-button raised>raised button</paper-button>
-      <paper-button noink>No ripple effect</paper-button>
-
-      <paper-button>
-        <core-icon icon="favorite"></core-icon>
-        custom button content
-      </paper-button>
-      If drawer is hidden, press button to display drawer.
-    </div>
-  </core-header-panel>
-</core-drawer-panel>
+        <paper-button>
+          <core-icon icon="favorite"></core-icon>
+          custom button content
+        </paper-button> -->
+      </div>
+    </core-header-panel>
+  </core-drawer-panel>
   </body>
 </html>
