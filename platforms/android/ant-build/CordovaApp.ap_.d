@@ -286,7 +286,10 @@
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/elements/my-element.html \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/img/logo.png \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/js/index.js \
+/Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/nl.x-services.plugins.flashlight \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/nl.x-services.plugins.flashlight/www \
+/Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/nl.x-services.plugins.flashlight/www/Flashlight.js \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/Krizia/work/projects/brightlight/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /Users/Krizia/work/projects/brightlight/platforms/android/ant-build/AndroidManifest.xml \

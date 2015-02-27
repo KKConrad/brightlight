@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Flashlight\"><param name=\"ios-package\" value=\"Flashlight\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -26,6 +30,9 @@
             "PACKAGE_NAME": "com.krizia.brightlight"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.krizia.brightlight"
+        },
+        "nl.x-services.plugins.flashlight": {
             "PACKAGE_NAME": "com.krizia.brightlight"
         }
     },

@@ -6,12 +6,19 @@ document.addEventListener('polymer-ready', function() {
   });
 });
 
-function bkgd(color){
-	var color;
-	document.getElementById('canvas').style.background = color;
-    document.getElementById('mainheader').style.color = color;
-};
+document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 
+function turnOnFlashlight() {
+    window.plugins.flashlight.switchOn();
+    addClass(document.getElementById('canvas'), 'turnon');
+    removeClass(document.getElementById('canvas'), 'turnoff');
+}
+
+function turnOffFlashlight() {
+    window.plugins.flashlight.switchOff();
+    addClass(document.getElementById('canvas'), 'turnoff');
+    removeClass(document.getElementById('canvas'), 'turnon');
+}
 function addClass(element, classToAdd) {
   var currentClassValue = element.className;
 
@@ -27,24 +34,55 @@ function addClass(element, classToAdd) {
 function removeClass(element, classToRemove) {
   var currentClassValue = element.className;
 
-  // removing a class value when there is more than one class value present
-  // and the class you want to remove is not the first one
-  if (currentClassValue.indexOf(" " + classToRemove) != -1) {
-    element.className = element.className.replace(" " + classToRemove, "");
+  if (currentClassValue == classToRemove) {
+    element.className = "";
     return;
   }
 
-  // removing the first class value when there is more than one class
-  // value present
-  if (currentClassValue.indexOf(classToRemove + " ") != -1) {
-    element.className = element.className.replace(classToRemove + " ", "");
-    return;
+  var classValues = currentClassValue.split(" ");
+  var filteredList = [];
+
+  for (var i = 0 ; i < classValues.length; i++) {
+    if (classToRemove != classValues[i]) {
+      filteredList.push(classValues[i]);
+    }
   }
 
-  // removing the first class value when there is only one class value
-  // present
-  if (currentClassValue.indexOf(classToRemove) != -1) {
-    element.className = element.className.replace(classToRemove, "");
-    return;
-  }
+  element.className = filteredList.join(" ");
 }
+
+
+/*
+
+window.plugins.flashlight.switchOn();
+
+setTimeout(function() {
+  window.plugins.flashlight.switchOff();
+});
+*/
+
+document.addEventListener("backbutton", function() {
+  // pass exitApp as callbacks to the switchOff method
+  window.plugins.flashlight.switchOff(exitApp, exitApp);
+}, false);
+
+function exitApp() {
+  navigator.app.exitApp();
+}
+/*
+window.plugins.flashlight.available(function(isAvailable) {
+  if (isAvailable) {
+
+    // switch on
+    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
+
+    // switch off after 3 seconds
+    setTimeout(function() {
+      window.plugins.flashlight.switchOff(); // success/error callbacks may be passed
+    }, 3000);
+
+  } else {
+    alert("Flashlight not available on this device");
+  }
+});
+*/

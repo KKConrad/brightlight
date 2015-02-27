@@ -3,6 +3,7 @@
   <head>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
+<!--    <script type="text/javascript" src="js/plugins/Flashlight.js"></script>-->
     <link rel="stylesheet" href="bright.css">
     <link rel="import" href="elements/my-element.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -13,8 +14,9 @@
     <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="bright.js"></script>
-
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <style media="screen">
       body {
         font-family: sans-serif;
@@ -43,7 +45,8 @@
     </style>
   </head>
 
-  <body>
+  <body fullbleed vertical layout>
+  <div fit layout>
   <core-drawer-panel id="drawerPanel">
 
     <core-header-panel drawer>
@@ -62,11 +65,26 @@
           id="navicon" icon="menu"></paper-icon-button>
         <span id="headtext" flex>Brightlight</span>
       </core-toolbar>
-      <div class="content" id="canvas">
-        <div class="buttonswitches">
-          <paper-button id="on" onclick="bkgd('white')" raised>On Button</paper-button>
-          <paper-button id="off" onclick="bkgd('black')" raised>Off Button</paper-button>
+      <div vertical layout class="content turnoff" id="canvas">
+        <div horizontal center-justified layout center class="buttonswitches">
+<!--          <paper-button id="on" onclick="bkgd('white')" raised>On Button</paper-button>
+          <paper-button id="off" onclick="bkgd('black')" raised>Off Button</paper-button>-->
+          <div horizontal center-justified layout>
+            <paper-button id="on" onclick="turnOnFlashlight()" raised>On Button</paper-button>
+          </div>
+          <div horizontal center-justified layout>
+            <paper-button id="off" onclick="turnOffFlashlight()" raised>Off Button</paper-button>
+          </div>
         </div>
+
+        <!--<div horizontal center-justified layout>
+          <paper-button id="on" onclick="window.plugins.flashlight.switchOn(); bkgd('white')" raised>On Button</paper-button>
+        </div>
+        <div horizontal center-justified layout>
+          <paper-button id="off" onclick="window.plugins.flashlight.switchOff(); bkgd('black')" raised>Off Button</paper-button>
+        </div>-->
+
+
         <!-- <my-element></my-element>
 
         <paper-button>flat button</paper-button>
@@ -80,5 +98,6 @@
       </div>
     </core-header-panel>
   </core-drawer-panel>
+    </div>
   </body>
 </html>

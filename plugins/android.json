@@ -11,6 +11,20 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Flashlight\"><param name=\"android-package\" value=\"nl.xservices.plugins.Flashlight\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -22,6 +36,9 @@
             "PACKAGE_NAME": "com.krizia.brightlight"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.krizia.brightlight"
+        },
+        "nl.x-services.plugins.flashlight": {
             "PACKAGE_NAME": "com.krizia.brightlight"
         }
     },

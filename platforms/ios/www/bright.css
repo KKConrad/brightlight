@@ -1,0 +1,26 @@
+#on {
+    background-color: greenyellow !important;
+    border-radius: 10px;
+}
+
+
+#off {
+    background-color: blue !important;
+    border-radius: 10px;
+    color: white;
+}
+
+#headtext {
+    color: black;
+}
+
+/*#canvas {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+
+.buttonswitches {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
